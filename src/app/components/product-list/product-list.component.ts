@@ -18,11 +18,11 @@ export class ProductListComponent implements OnInit {
   }
 
   share() {
-    window.alert($localize`The product has been shared`)
+    this.languageService.translate(msg => window.alert(msg), 'share-product-msg');
   }
 
   onNotify() {
-    window.alert($localize`You will be notified when the product goes on sale`);
+    this.languageService.translate(msg => window.alert(msg), 'product-on-sale-msg');
   }
 
   getLang() {

@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
 
   onSubmit(): void {
     this.items = this.cartService.clearCart();
-    console.warn($localize`Your order has been submitted`, this.checkoutForm.value);
+    this.languageService.translate(msg => window.alert(msg), 'order-submit-msg');
     this.checkoutForm.reset();
   }
 

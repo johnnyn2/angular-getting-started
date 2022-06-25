@@ -24,7 +24,7 @@ export class ProductDetailsComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.addToCart(product);
-    window.alert($localize`Your product has been added to the cart!`);
+    this.languageService.translate(msg => window.alert(msg), 'add-product-msg');
   }
 
   getLang() {

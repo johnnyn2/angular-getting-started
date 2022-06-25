@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
@@ -7,10 +6,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LanguageService {
   lang: string = 'zh';
+  supportedLanguages = ['en', 'zh'];
   constructor(
     private translateService: TranslateService
   ) {
-    this.translateService.addLangs(environment.supportLanguages);
+    this.translateService.addLangs(this.supportedLanguages);
     this.translateService.setDefaultLang(this.lang);
   }
 
@@ -21,5 +21,9 @@ export class LanguageService {
 
   getLang() {
     return this.lang;
+  }
+
+  translate(cb: (res: string) => void, key: string, params?: {value:string}) {
+    return this.translateService.get(key, params).subscribe((res: string) => cb(res));
   }
 }

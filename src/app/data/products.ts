@@ -1,28 +1,36 @@
 export interface Product {
   id: number;
-  name: string;
+  en_name: string;
+  zh_name: string;
   price: number;
-  description: string;
+  en_description: string;
+  zh_description: string;
 }
 
 export const products = [
   {
     id: 1,
-    name: 'Phone XL',
+    en_name: 'Phone XL',
+    zh_name: '大型號電話',
     price: 799,
-    description: 'A large phone with one of the best screens'
+    en_description: 'A large phone with one of the best screens',
+    zh_description: '大電話及棒極了的屏幕'
   },
   {
     id: 2,
-    name: 'Phone Mini',
+    en_name: 'Phone Mini',
+    zh_name: '迷你電話',
     price: 699,
-    description: 'A great phone with one of the best cameras'
+    en_description: 'A great phone with one of the best cameras',
+    zh_description: '棒極了的電話及最好的鏡頭'
   },
   {
     id: 3,
-    name: 'Phone Standard',
+    en_name: 'Phone Standard',
+    zh_name: '標準電話',
     price: 299,
-    description: ''
+    en_description: '',
+    zh_description: ''
   }
 ];
 

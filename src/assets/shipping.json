@@ -1,14 +1,17 @@
 [
     {
-        "type": "Overnight",
+        "en_type": "Overnight",
+        "zh_type": "過夜",
         "price": 25.99
     },
     {
-        "type": "2-Day",
+        "en_type": "2-Day",
+        "zh_type": "2日",
         "price": 9.99
     },
     {
-        "type": "Postal",
+        "en_type": "Postal",
+        "zh_type": "郵政",
         "price": 2.99
     }
 ]

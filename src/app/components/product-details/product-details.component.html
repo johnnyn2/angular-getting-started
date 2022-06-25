@@ -1,7 +1,7 @@
 <h2>{{ 'product-details' | translate }}</h2>
 <div *ngIf="product">
-    <h3>{{ product.name }}</h3>
+    <h3>{{ getLang() === 'en' ? product.en_name : product.zh_name }}</h3>
     <h4>{{ product.price | currency }}</h4>
-    <p>{{ product.description }}</p>
+    <p>{{  getLang() === 'en' ? product.en_description : product.zh_description }}</p>
     <button (click)="addToCart(product)">{{ 'buy' | translate }}</button>
 </div>

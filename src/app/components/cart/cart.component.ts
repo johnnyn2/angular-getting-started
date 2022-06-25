@@ -19,6 +19,7 @@ export class CartComponent implements OnInit {
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
+    private languageService: LanguageService
   ) { }
 
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.clearCart();
     console.warn($localize`Your order has been submitted`, this.checkoutForm.value);
     this.checkoutForm.reset();
+  }
+
+  getLang() {
+    return this.languageService.getLang()
   }
 }

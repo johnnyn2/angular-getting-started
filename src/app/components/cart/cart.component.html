@@ -3,7 +3,7 @@
     <a routerLink="/shipping">{{ 'shipping-price' | translate }}</a>
 </p>
 <div class="cart-item" style="display: flex; flex-direction: column;" *ngFor="let item of items">
-    <span>{{ item.name }}</span>
+    <span>{{ getLang() === 'en' ? item.en_name : item.zh_name }}</span>
     <span>{{ item.price | currency }}</span>
 </div>
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">

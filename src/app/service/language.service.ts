@@ -16,7 +16,7 @@ export class LanguageService {
 
   setLang(lang:string) {
     this.lang = lang;
-    this.translateService.setDefaultLang(this.lang);
+    this.translateService.use(this.lang);
   }
 
   getLang() {

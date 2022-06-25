@@ -2,13 +2,13 @@
 <div *ngFor="let product of products">
     <h3>
         <a
-            [title]="product.name + ' details'"
+            [title]="product.en_name + ' details'"
             [routerLink]="['/products', product.id]">
-            {{product.name}}
+            {{ getLang() == 'en' ? product.en_name : product.zh_name }}
         </a>
     </h3>
-    <p *ngIf="product.description">
-        {{ 'description' | translate }} {{ product.description }}
+    <p *ngIf="(getLang() == 'en' && product.en_description) || (getLang() == 'zh' && product.zh_description)">
+        {{ 'description' | translate }} {{ getLang() == 'en' ? product.en_description : product.zh_description }}
     </p>
     <button type="button" (click)="share()">
         {{ 'share' | translate }}

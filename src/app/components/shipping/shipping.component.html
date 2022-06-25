@@ -1,5 +1,5 @@
 <h3>{{ 'shipping-price' | translate }}</h3>
 <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
-    <span>{{ shipping.type }}</span>
+    <span>{{ getLang() === 'en' ? shipping.en_type : shipping.zh_type }}</span>
     <span>{{ shipping.price | currency }}</span>
 </div>

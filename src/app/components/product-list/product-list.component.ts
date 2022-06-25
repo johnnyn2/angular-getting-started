@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/service/language.service';
 import { products } from '../../data/products';
 
 @Component({
@@ -9,7 +10,9 @@ import { products } from '../../data/products';
 export class ProductListComponent implements OnInit {
   products = products;
 
-  constructor() { }
+  constructor(
+    private languageService: LanguageService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -20,5 +23,9 @@ export class ProductListComponent implements OnInit {
 
   onNotify() {
     window.alert($localize`You will be notified when the product goes on sale`);
+  }
+
+  getLang() {
+    return this.languageService.getLang();
   }
 }

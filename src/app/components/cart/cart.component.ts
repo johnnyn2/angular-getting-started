@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/service/cart.service';
+import { LanguageService } from 'src/app/service/language.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +18,7 @@ export class CartComponent implements OnInit {
   })
   constructor(
     private cartService: CartService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
   ) { }
 
   ngOnInit(): void {
@@ -23,7 +26,7 @@ export class CartComponent implements OnInit {
 
   onSubmit(): void {
     this.items = this.cartService.clearCart();
-    console.warn('Your order has been submitted', this.checkoutForm.value);
+    console.warn($localize`Your order has been submitted`, this.checkoutForm.value);
     this.checkoutForm.reset();
   }
 }

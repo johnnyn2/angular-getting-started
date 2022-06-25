@@ -1,0 +1,19 @@
+{
+    "cart": "Cart",
+    "shipping-price": "Shipping Prices",
+    "name": "Name",
+    "address": "Address",
+    "purchases": "Purchase",
+    "order-submit-msg": "Your order has been submitted",
+    "notify-me": "Notify Me",
+    "product-details": "Product Details",
+    "buy": "Buy",
+    "add-product-msg": "Your product has been added to the cart!",
+    "products": "Products",
+    "description": "Description:",
+    "share": " Share ",
+    "share-product-msg": "The product has been shared",
+    "product-on-sale-msg": "You will be notified when the product goes on sale",
+    "my-store": "My Store",
+    "checkout": "Checkout"
+}

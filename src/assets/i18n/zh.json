@@ -1,0 +1,19 @@
+{
+    "cart": "購物車",
+    "shipping-price": "運費",
+    "name": "名稱",
+    "address": "地址",
+    "purchases": "購買",
+    "order-submit-msg": "你的訂單已提交",
+    "notify-me": "通知我",
+    "product-details": "產品資料",
+    "buy": "購買",
+    "add-product-msg": "產品已加入購物車!",
+    "products": "產品",
+    "description": "描述: ",
+    "share": " 分享 ",
+    "share-product-msg": "分享成功",
+    "product-on-sale-msg": "你將會收到通知如果有貨",
+    "my-store": "我的商店",
+    "checkout": "查看"
+}

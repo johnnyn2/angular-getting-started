@@ -1,4 +1,4 @@
-<h2>Products</h2>
+<h2>{{ 'products' | translate }}</h2>
 <div *ngFor="let product of products">
     <h3>
         <a
@@ -8,10 +8,10 @@
         </a>
     </h3>
     <p *ngIf="product.description">
-        Description: {{ product.description }}
+        {{ 'description' | translate }} {{ product.description }}
     </p>
     <button type="button" (click)="share()">
-        Share
+        {{ 'share' | translate }}
     </button>
     <app-product-alerts
         [product]="product"
